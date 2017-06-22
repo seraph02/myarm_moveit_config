@@ -1,0 +1,13 @@
+controller_list:
+#控制器的ros topic——arm_controller/follow_joint_trajectory
+  - name: arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    #在driver中要声明的action service类型
+    default: true
+    joints:
+      - body_to_left_shoulder_joint
+      - shoulder_stevo_lift_to_axis
+      - big_arm_up_to_axis
+      - small_arm_up_to_axis
+      - wrist_run_stevo_to_axis
